@@ -419,7 +419,7 @@
         </div>
 
         <div class="container-prod-unique">
-            <button id="buyButtonUnique" class="bold-unique" onclick="window.location.href='https://pay.kiwify.com.br/GifLnah'">Garantir meu acesso agora</button>
+            <button id="buyButtonUnique" class="bold-unique" onclick="window.location.href='https://pay.kiwify.com.br/GifLnah'">Transforme seus fios</button>
             <div class="offer-message-unique">50% OFF por tempo limitado.</div>
         </div>
 
@@ -442,6 +442,9 @@
             </div>
             <div class="cont3">Mais informações no vídeo acima...</div>
         </div>
+
+        <!-- Botão para resetar o progresso do vídeo -->
+        <button id="resetBtn" onclick="resetVideoProgress()">Resetar Progresso</button>
 
         <div class="footer-info">
             <p><strong>Garantia de Satisfação de 30 Dias</strong></p>
@@ -499,7 +502,7 @@
                     playPauseBtn.classList.add('playing');
                     setTimeout(() => {
                         playPauseBtn.classList.add('hidden');
-                    }, 600);
+                    }, 500);
                 } else {
                     video.pause();
                     playPauseBtn.classList.remove('playing');
@@ -508,7 +511,7 @@
             }
     
             video.addEventListener('timeupdate', function() {
-                if (video.currentTime >= 60) {
+                if (video.currentTime >= 50) {
                     containerProdUnique.style.display = 'block';
                     saveVideoProgress(); // Salva no LocalStorage
                 }
